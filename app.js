@@ -19,7 +19,7 @@
   const renderGrid = filter => {
     if (!grid) return;
     const filtered = projects.filter(p => filter === 'all' || p.categories.includes(filter));
-    const featureOrder = ['frisbee-launcher', 'atom-iq', 'lug-wrench-fea', 'bed-frame-fea', 'jumper-robot'];
+    const featureOrder = ['frisbee-launcher', 'jumper-robot', 'atom-iq', 'lug-wrench-fea', 'bed-frame-fea'];
     const ordered = filter === 'all' ? [...filtered].sort((a,b) => {
       const rank = project => featureOrder.indexOf(project.id) >= 0 ? featureOrder.indexOf(project.id) : 100 + projects.indexOf(project);
       return rank(a)-rank(b);
@@ -46,11 +46,11 @@
       document.title = `${p.title} — Ethan Bikhazi-Green`;
       const idx = projects.findIndex(item => item.id === p.id);
       const next = projects[(idx+1) % projects.length];
-      const videoMarkup = p.video ? `<figure class="case-video">
-        <div class="case-video-wrap"><video controls playsinline preload="metadata" poster="${escapeHTML(p.video.poster)}" aria-label="Demonstration video: ${escapeHTML(p.title)}"><source src="${escapeHTML(p.video.src)}" type="video/mp4" />Your browser cannot play this video. <a href="${escapeHTML(p.video.src)}">Open the video file</a>.</video></div>
+      const videoMarkup = p.video ? `<figure class="case-video case-video-feature">
+        <div class="case-video-wrap case-video-stage"><span class="video-corner">WATCH THE PROJECT IN ACTION <span aria-hidden="true">▶</span></span><video controls playsinline preload="metadata" poster="${escapeHTML(p.video.poster)}" aria-label="Demonstration video: ${escapeHTML(p.title)}"><source src="${escapeHTML(p.video.src)}" type="video/mp4" />Your browser cannot play this video. <a href="${escapeHTML(p.video.src)}">Open the video file</a>.</video></div>
         <figcaption>${escapeHTML(p.video.caption)}</figcaption>
       </figure>` : '';
-      const imagesMarkup = (p.gallery || []).length ? `<div class="case-gallery">${p.gallery.map(g => `<figure class="case-gallery-item"><a target="_blank" rel="noopener noreferrer" href="${escapeHTML(g.src)}" aria-label="Open image: ${escapeHTML(g.caption)}"><img src="${escapeHTML(g.src)}" alt="${escapeHTML(g.alt)}" loading="lazy" /><span class="expand-icon" aria-hidden="true">↗</span></a><figcaption>${escapeHTML(g.caption)}</figcaption></figure>`).join('')}</div>` : '';
+      const imagesMarkup = (p.gallery || []).length ? `<div class="case-gallery case-gallery-feature">${p.gallery.map(g => `<figure class="case-gallery-item"><a target="_blank" rel="noopener noreferrer" href="${escapeHTML(g.src)}" aria-label="Open image: ${escapeHTML(g.caption)}"><img src="${escapeHTML(g.src)}" alt="${escapeHTML(g.alt)}" loading="lazy" /><span class="expand-icon" aria-hidden="true">↗</span></a><figcaption>${escapeHTML(g.caption)}</figcaption></figure>`).join('')}</div>` : '';
       const docsMarkup = (p.documents || []).length ? `<div class="case-documents"><h3 class="case-subheading">Technical documentation</h3>${p.documents.map(d => `<a class="document-link" href="${escapeHTML(d.href)}" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">▤</span><span>${escapeHTML(d.label)}</span><span aria-hidden="true">↗</span></a>`).join('')}</div>` : '';
       const hasMedia = !!(p.video || (p.gallery || []).length || (p.documents || []).length);
       // sourceNote stores editing guidance and is intentionally not rendered to visitors.
@@ -58,16 +58,22 @@
       // Avoid public development to-do lists; unfinished evidence stays in project data.
       const todoHTML = '';
       const illustrationLabel = p.imageLabel === 'ILLUSTRATIVE GRAPHIC' ? 'ILLUSTRATIVE GRAPHIC — NOT A PROJECT PHOTO' : (p.imageLabel || 'ACTUAL PROJECT EVIDENCE');
+      // Put proof before prose: playable demo, then real project imagery, then engineering narrative.
+      const intro = `<div class="case-heading ${p.video ? 'case-heading-compact' : ''}"><div class="eyebrow eyebrow-dark"><span class="eyebrow-line"></span>${escapeHTML(p.descriptor).toUpperCase()}</div><h1>${escapeHTML(p.title)}</h1>${p.video ? '' : `<p>${escapeHTML(p.summary)}</p>`}<div class="project-tags">${tags(p.categories)}</div></div>`;
+      const heroImage = `<div class="case-hero-image ${p.imageLabel==='ILLUSTRATIVE GRAPHIC'?'case-hero-illustration':''}">${imageMarkup(p, true)}<span>${escapeHTML(illustrationLabel)}</span></div>`;
+      const gallery = imagesMarkup ? `<section class="case-visual-evidence" aria-labelledby="gallery-heading"><div class="case-evidence-heading"><span>PROJECT VISUALS</span><h2 id="gallery-heading">A closer look.</h2><p>Actual photos, CAD captures and test evidence. Select any image to view it full-size.</p></div>${imagesMarkup}</section>` : '';
+      const projectInfo = `<div class="case-at-glance"><div><span>ROLE / CONTEXT</span><strong>${escapeHTML(p.role)}</strong></div><div><span>WHEN</span><strong>${escapeHTML(p.timeline)}</strong></div><div><span>TOOLS / METHODS</span><strong>${escapeHTML(p.tools.slice(0,3).join(' · '))}</strong></div></div>
+        <section class="case-results" aria-label="Project metrics">${p.metrics.map(m => `<div><strong>${escapeHTML(m[0])}</strong><span>${escapeHTML(m[1])}</span></div>`).join('')}</section>`;
+      const narrative = `<section class="case-content"><div class="case-sidebar"><span>01 / THE PROBLEM</span></div><div><h2>Engineering challenge</h2><p>${escapeHTML(p.challenge)}</p></div></section>
+        <section class="case-content case-process"><div class="case-sidebar"><span>02 / THE PROCESS</span></div><div><h2>Design, build & iterate</h2>${p.process.map((s,i) => `<div class="process-row"><span class="process-number">${String(i+1).padStart(2,'0')}</span><div><h3>${escapeHTML(s[0])}</h3><p>${escapeHTML(s[1])}</p></div></div>`).join('')}</div></section>
+        <section class="case-content"><div class="case-sidebar"><span>03 / THE OUTCOME</span></div><div><h2>Results & contribution</h2><p>${escapeHTML(p.result)}</p><h3 class="case-subheading">My contribution</h3><p>${escapeHTML(p.contribution)}</p></div></section>`;
       projectContainer.innerHTML = `
         <div class="case-back"><a href="index.html#work">← ALL PROJECTS</a><span>CASE STUDY / ${escapeHTML(p.number)}</span></div>
-        <div class="case-heading"><div class="eyebrow eyebrow-dark"><span class="eyebrow-line"></span>${escapeHTML(p.descriptor).toUpperCase()}</div><h1>${escapeHTML(p.title)}</h1><p>${escapeHTML(p.summary)}</p><div class="project-tags">${tags(p.categories)}</div>${hasMedia ? `<div class="case-quicklinks"><a href="#project-evidence">${p.video ? 'Watch demo & see figures' : 'See CAD, figures & reports'} <span aria-hidden="true">↓</span></a>${(p.documents || []).length ? `<a href="${escapeHTML(p.documents[0].href)}" target="_blank" rel="noopener noreferrer">Open technical report <span aria-hidden="true">↗</span></a>` : ''}</div>` : ''}</div>
-        <div class="case-hero-image ${p.imageLabel==='ILLUSTRATIVE GRAPHIC'?'case-hero-illustration':''}">${imageMarkup(p, true)}<span>${escapeHTML(illustrationLabel)}</span></div>
-        <div class="case-at-glance"><div><span>ROLE / CONTEXT</span><strong>${escapeHTML(p.role)}</strong></div><div><span>WHEN</span><strong>${escapeHTML(p.timeline)}</strong></div><div><span>TOOLS / METHODS</span><strong>${escapeHTML(p.tools.slice(0,3).join(' · '))}</strong></div></div>
-        <section class="case-results" aria-label="Project metrics">${p.metrics.map(m => `<div><strong>${escapeHTML(m[0])}</strong><span>${escapeHTML(m[1])}</span></div>`).join('')}</section>
-        <section class="case-content"><div class="case-sidebar"><span>01 / THE PROBLEM</span></div><div><h2>Engineering challenge</h2><p>${escapeHTML(p.challenge)}</p></div></section>
-        <section class="case-content case-process"><div class="case-sidebar"><span>02 / THE PROCESS</span></div><div><h2>Design, build & iterate</h2>${p.process.map((s,i) => `<div class="process-row"><span class="process-number">${String(i+1).padStart(2,'0')}</span><div><h3>${escapeHTML(s[0])}</h3><p>${escapeHTML(s[1])}</p></div></div>`).join('')}</div></section>
-        <section class="case-content"><div class="case-sidebar"><span>03 / THE OUTCOME</span></div><div><h2>Results & contribution</h2><p>${escapeHTML(p.result)}</p><h3 class="case-subheading">My contribution</h3><p>${escapeHTML(p.contribution)}</p>${noteHTML}</div></section>
-        <section id="project-evidence" class="case-content case-media-next"><div class="case-sidebar"><span>04 / THE EVIDENCE</span></div><div><h2>${hasMedia ? 'See the work.' : 'Tools & methods'}</h2>${hasMedia ? '<p class="media-intro">Original footage, CAD captures, simulation figures, and supporting technical documentation.</p>' : ''}${videoMarkup}${imagesMarkup}${docsMarkup}<div class="skill-line"><span>TOOLS & METHODS</span><div class="project-tags">${tags(p.tools)}</div></div></div></section>
+        ${intro}
+        ${p.video ? `<section class="case-motion-first" aria-label="Video demonstration of ${escapeHTML(p.title)}">${videoMarkup}</section>${gallery}<p class="case-visual-summary">${escapeHTML(p.summary)}</p>` : `${heroImage}${gallery}`}
+        ${projectInfo}
+        ${narrative}
+        <section id="project-evidence" class="case-content case-media-next"><div class="case-sidebar"><span>04 / MORE DETAILS</span></div><div><h2>Documentation & tools.</h2>${!p.video && videoMarkup ? videoMarkup : ''}${docsMarkup}<div class="skill-line"><span>TOOLS & METHODS</span><div class="project-tags">${tags(p.tools)}</div></div></div></section>
         <a class="next-project" href="${projectURL(next)}"><div><span>UP NEXT / ${escapeHTML(next.number)}</span><h2>${escapeHTML(next.title)}</h2></div><span aria-hidden="true">↗</span></a>`;
     }
   }

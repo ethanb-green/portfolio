@@ -71,3 +71,44 @@
 .resume-request{font-weight:700;color:#e0f8f5;display:inline-block;margin-bottom:12px;text-decoration:underline;text-underline-offset:5px}
 @media(max-width:960px){.hero-project-visual{padding-top:58px;padding-bottom:47px}.hero-work-grid{gap:7px}.hero-work-stack{gap:7px}.hero-work-grid a span{font-size:8px;padding:21px 8px 7px}}
 @media(max-width:670px){.hero-project-visual{padding:54px 10px 42px}.hero-project-visual .hero-visual-label{top:18px;left:13px;right:13px}.hero-project-visual .hero-visual-bottom{bottom:14px;left:13px;right:13px}.hero-work-grid a span{font-size:8px;line-height:1.3}.hero-work-stack img{padding:4px}.case-quicklinks{margin-top:18px}.case-quicklinks a{font-size:11px}}
+
+/* V3: visual-first engineering case studies */
+.case-heading-compact{padding:32px 0 20px;max-width:none}
+.case-heading-compact h1{font-size:clamp(35px,4.6vw,63px);margin:17px 0 11px}
+.case-heading-compact .project-tags{margin-top:12px}
+.case-motion-first{margin:0;padding:0;border:0}
+.case-video-feature{margin:0}
+.case-video-stage{position:relative;min-height:0;background:radial-gradient(ellipse at 50% 38%,#344e5c,#162a34 68%);overflow:hidden}
+.case-video-stage video{display:block;width:100%;height:min(67vh,615px);max-height:none;object-fit:contain;background:transparent}
+.video-corner{position:absolute;z-index:1;top:15px;left:17px;background:rgba(18,37,50,.86);color:white;padding:9px 13px;font:700 10px var(--mono);letter-spacing:.09em;pointer-events:none}
+.video-corner span{font-size:14px;margin-left:11px}
+.case-video-feature figcaption{padding:10px 0 0;font-size:11px;margin-top:0}
+.case-visual-evidence{padding:33px 0 52px;border-bottom:1px solid var(--line)}
+.case-evidence-heading{display:flex;align-items:baseline;flex-wrap:wrap;gap:13px 23px}
+.case-evidence-heading span{color:var(--accent);font:700 10px var(--mono);letter-spacing:.11em}
+.case-evidence-heading h2{font-size:clamp(27px,3vw,39px);letter-spacing:-.05em;margin:0}
+.case-evidence-heading p{color:var(--muted);font-size:12px;line-height:1.5;margin:0 0 0 auto;max-width:365px}
+.case-gallery-feature{margin:24px 0 0;grid-template-columns:repeat(2,minmax(0,1fr));gap:21px 19px}
+.case-gallery-feature .case-gallery-item>a{aspect-ratio:1.56/1;min-height:0;background:#e9eae7}
+.case-gallery-feature .case-gallery-item>a img{object-fit:contain;padding:0;background:#ecede8}
+.case-gallery-feature .case-gallery-item figcaption{font-size:12px}
+.case-visual-summary{max-width:810px;color:#627177;font-size:16px;line-height:1.8;margin:40px 0 24px}
+.case-heading:not(.case-heading-compact){padding-bottom:27px}
+.case-at-glance{margin-top:0}
+.case-visual-evidence + .case-at-glance{margin-top:22px}
+.case-content p{max-width:790px}
+/* On smaller screens the video still takes priority without taking over the entire page. */
+@media(max-width:670px){
+  .case-heading-compact{padding:25px 0 17px}
+  .case-heading-compact h1{font-size:clamp(35px,9vw,52px);margin:12px 0 9px}
+  .case-heading-compact .project-tags{margin-top:10px}
+  .case-video-stage video{height:min(58vh,520px);width:100%}
+  .video-corner{top:9px;left:10px;padding:7px 9px;font-size:8px}
+  .case-visual-evidence{padding:30px 0 34px}
+  .case-evidence-heading{gap:9px}
+  .case-evidence-heading p{flex-basis:100%;margin:0}
+  .case-gallery-feature{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px 11px;margin-top:17px}
+  .case-gallery-feature .case-gallery-item>a{aspect-ratio:1/1}
+  .case-gallery-feature .case-gallery-item figcaption{font-size:10px;line-height:1.5;margin-top:7px}
+  .case-visual-summary{margin:24px 0;font-size:14px}
+}

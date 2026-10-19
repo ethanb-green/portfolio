@@ -96,7 +96,7 @@ window.PORTFOLIO_PROJECTS = [
     ],
     "video": {
       "src": "assets/media/frisbee-launch-demo.mp4",
-      "poster": "assets/media/frisbee-poster.jpg",
+      "poster": "assets/media/frisbee-final-build.webp",
       "caption": "Actual launcher demonstration. The video illustrates operation; no launch speed or range was measured from this clip."
     },
     "documents": [
@@ -117,8 +117,8 @@ window.PORTFOLIO_PROJECTS = [
       "Systems"
     ],
     "featured": true,
-    "image": "assets/media/jumper-poster.jpg",
-    "imageAlt": "Classroom jumping robot prototype with a height reference in the background",
+    "image": "assets/media/jumper-device-cover.webp",
+    "imageAlt": "Full jumping-robot prototype with elastic bands, lightweight frame, and trigger mechanism, cropped from the original demonstration video",
     "imageLabel": "ACTUAL DEMONSTRATION",
     "role": "Robotics Mini Project · Prototype & Test",
     "timeline": "2026",
@@ -162,14 +162,24 @@ window.PORTFOLIO_PROJECTS = [
     ],
     "video": {
       "src": "assets/media/robot-jumper-demo.mp4",
-      "poster": "assets/media/jumper-poster.jpg",
+      "poster": "assets/media/jumper-device-cover.webp",
       "caption": "Original classroom jumping-robot demonstration, with tape measure for scale."
     },
     "gallery": [
       {
-        "src": "assets/media/jumper-poster.jpg",
-        "alt": "Prototype robot positioned beside a measuring tape",
-        "caption": "Jumper prototype before actuation (frame from provided video)"
+        "src": "assets/media/jumper-device-cover.webp",
+        "alt": "Full jumping robot with wooden-stick frame, elastic bands, and central assembly",
+        "caption": "Completed prototype — close-up from the original demonstration"
+      },
+      {
+        "src": "assets/media/jumper-release-prep.webp",
+        "alt": "Hands preparing the jumping robot release mechanism before its demonstration",
+        "caption": "Preparing the prototype for the jump"
+      },
+      {
+        "src": "assets/media/jumper-in-flight.webp",
+        "alt": "Jumping robot airborne beside a measuring tape during the recorded test",
+        "caption": "Robot in flight, captured from the demonstration video"
       }
     ],
     "documents": [],
