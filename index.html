@@ -5,7 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Engineering portfolio of Ethan Bikhazi-Green. Mechanical design, systems integration, controls, prototyping, and automation." />
   <meta name="theme-color" content="#f7f7f2" />
-  <title>Ethan Bikhazi-Green — Engineering Portfolio</title>
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ethan Bikhazi-Green | Mechanical & Systems Engineering" />
+  <meta property="og:description" content="Hands-on mechanical design, systems integration, prototyping and FEA projects. Explore real project footage, CAD and technical case studies." />
+  <meta property="og:image" content="https://ethanb-green.github.io/portfolio/assets/media/frisbee-final-build.webp" />
+  <title>Ethan Bikhazi-Green — Mechanical & Systems Engineering Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
   <script src="projects.js" defer></script>
   <script src="app.js" defer></script>
@@ -26,41 +30,38 @@
       <div class="hero-copy">
         <div class="eyebrow"><span class="eyebrow-line"></span> MECHANICAL ENGINEERING <span class="eyebrow-dot">/</span> SYSTEMS & CONTROLS</div>
         <h1 id="hero-title">I build things<br/>that <em>work.</em></h1>
-        <p class="hero-description">I'm <strong>Ethan Bikhazi-Green</strong>, a mechanical engineering student at UC Santa Barbara. I work across mechanical design, hardware integration, controls, and automation — from first sketch to tested prototype. This site documents what I built and what I learned.</p>
+        <p class="hero-description">I'm <strong>Ethan Bikhazi-Green</strong>, a mechanical engineering student at UC Santa Barbara. I design hardware, integrate mechanical and control systems, and test real prototypes. Explore the engineering decisions, failures, and improvements behind my work.</p>
         <div class="hero-buttons"><a class="button button-primary" href="#work">Explore my projects <span aria-hidden="true">↗</span></a><a class="button button-outline" href="mailto:ethanbikhazi-green@ucsb.edu">Get in touch <span aria-hidden="true">→</span></a></div>
         <div class="hero-status"><span class="status-pulse" aria-hidden="true"></span> B.S. Mechanical Engineering · Expected June 2027</div>
       </div>
-      <div class="hero-visual" aria-label="Stylized engineering diagram representing design, fabrication and testing">
-        <div class="hero-visual-label">FIG. 01 <span>DESIGN / BUILD / TEST</span></div>
-        <svg class="hero-mechanical" viewBox="0 0 560 510" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <defs><pattern id="dots" width="25" height="25" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1.3" fill="#637788" opacity=".27"/></pattern><linearGradient id="ring" x1="100" y1="60" x2="480" y2="460"><stop stop-color="#7CDBF1"/><stop offset="1" stop-color="#2D63F5"/></linearGradient></defs>
-          <rect width="560" height="510" fill="url(#dots)"/>
-          <circle cx="282" cy="251" r="174" stroke="#586F86" stroke-width="1" stroke-dasharray="6 8" opacity=".62"/>
-          <circle cx="282" cy="251" r="132" stroke="url(#ring)" stroke-width="2"/>
-          <circle cx="282" cy="251" r="93" stroke="#8FBBCB" stroke-width="1.4"/>
-          <circle cx="282" cy="251" r="33" stroke="#B5EAF2" stroke-width="2"/>
-          <circle cx="282" cy="251" r="12" fill="#88E2ED"/>
-          <path d="M282 119V218M282 284v99M150 251h99m66 0h99" stroke="#8CC5D1" stroke-width="1" opacity=".75"/>
-          <path d="M282 77V33M282 425v37M108 251H65m392 0h39" stroke="#7EDAE6" stroke-width="2"/>
-          <path d="M103 116L450 393M449 110L106 397" stroke="#8195A8" stroke-width="1" stroke-dasharray="3 11" opacity=".5"/>
-          <path d="M189 158A132 132 0 0 1 371 346" stroke="#7EDAE6" stroke-width="10" stroke-linecap="round"/>
-          <path d="M191 343A132 132 0 0 1 376 162" stroke="#8F9FFE" stroke-width="10" stroke-linecap="round"/>
-          <path d="M421 124H510M421 124L371 175M81 394H172L211 354" stroke="#B2C4CD" stroke-width="1"/>
-          <circle cx="421" cy="124" r="3" fill="#7EDAE6"/><circle cx="211" cy="354" r="3" fill="#7EDAE6"/>
-          <text x="426" y="111" fill="#B6D1E0" font-family="monospace" font-size="12">R 132</text>
-          <text x="81" y="385" fill="#B6D1E0" font-family="monospace" font-size="12">MODEL 001</text>
-          <text x="282" y="481" text-anchor="middle" fill="#718DA1" font-family="monospace" font-size="10" letter-spacing="3">ITERATE // VALIDATE // IMPROVE</text>
-        </svg>
-        <div class="hero-visual-bottom"><span>MECHANICAL ↔ SOFTWARE</span><span>01 / ∞</span></div>
+      <div class="hero-visual hero-project-visual" aria-label="Photographs and engineering figures from selected portfolio projects">
+        <div class="hero-visual-label">SELECTED WORK <span>DESIGN / BUILD / VALIDATE</span></div>
+        <div class="hero-work-grid">
+          <a class="hero-work-primary" href="project.html?id=frisbee-launcher" aria-label="View the frisbee launcher case study">
+            <img src="assets/media/frisbee-poster.jpg" alt="Actual flywheel-based frisbee launcher during a demonstration" fetchpriority="high" />
+            <span>01 / FLYWHEEL LAUNCHER <b>↗</b></span>
+          </a>
+          <div class="hero-work-stack">
+            <a href="project.html?id=atom-iq" aria-label="View the ATOM-IQ structural CAD case study">
+              <img src="assets/media/atom-iq-overhead-assembly.webp" alt="Actual overhead modular aluminum extrusion CAD assembly for ATOM-IQ" />
+              <span>02 / STRUCTURAL CAD <b>↗</b></span>
+            </a>
+            <a href="project.html?id=lug-wrench-fea" aria-label="View the lug-wrench FEA case study">
+              <img src="assets/media/lug-wrench-revised-stress.webp" alt="Finite-element von Mises stress simulation of a redesigned lug wrench" />
+              <span>03 / STRUCTURAL FEA <b>↗</b></span>
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual-bottom"><span>ACTUAL PROJECT WORK</span><span>EXPLORE ↗</span></div>
       </div>
     </section>
 
     <section class="metrics-band" aria-label="Selected project outcomes">
-      <div class="shell metric-row"><div><strong>30 <small>cm</small></strong><span>FLYWHEEL PROTOTYPE</span></div><div><strong>25<small>%</small></strong><span>MODELED MASS REDUCTION</span></div><div><strong>3,300<small>+</small></strong><span>ANNUAL HOURS UNLOCKED</span></div><div class="metric-statement">A hands-on approach, from <em>idea</em> to implementation.</div></div>
+      <div class="shell metric-row"><div><strong>17 <small>in</small></strong><span>REPORTED ROBOT JUMP</span></div><div><strong>25<small>%</small></strong><span>MODELED MASS REDUCTION</span></div><div><strong>3,300<small>+</small></strong><span>EST. ANNUAL WORK HOURS SAVED</span></div><div class="metric-statement">A hands-on approach, from <em>idea</em> to implementation.</div></div>
     </section>
 
     <section id="work" class="section shell work-section" aria-labelledby="work-heading">
-      <div class="section-intro"><div><div class="eyebrow eyebrow-dark"><span class="eyebrow-line"></span> SELECTED WORK / 01</div><h2 id="work-heading">Built, tested <em>&amp; documented.</em></h2></div><p>Explore build footage, actual CAD work, structural analysis, and the decisions behind each engineering project.</p></div>
+      <div class="section-intro"><div><div class="eyebrow eyebrow-dark"><span class="eyebrow-line"></span> SELECTED WORK / 01</div><h2 id="work-heading">Built, tested <em>&amp; documented.</em></h2></div><p>Watch the prototypes in action, inspect CAD and FEA results, and see the design decisions that led to each outcome.</p></div>
       <div class="filters" role="group" aria-label="Filter projects"><button class="filter active" data-filter="all" aria-pressed="true">All projects</button><button class="filter" data-filter="Mechanical" aria-pressed="false">Mechanical</button><button class="filter" data-filter="Systems" aria-pressed="false">Systems & controls</button><button class="filter" data-filter="Analysis" aria-pressed="false">Analysis</button><button class="filter" data-filter="Software" aria-pressed="false">Software</button></div>
       <div class="project-grid" id="projects-grid" aria-live="polite"></div>
       <div class="future-project"><div class="future-icon">+</div><div><h3>There’s always another project.</h3><p>This portfolio is designed to grow with every new prototype, experiment, and engineering challenge.</p></div><span class="future-note">MORE TO COME ↗</span></div>
@@ -76,7 +77,7 @@
       </div>
     </section>
 
-    <section id="contact" class="contact-section"><div class="shell contact-flex"><div><div class="eyebrow"><span class="eyebrow-line"></span> LET'S CONNECT / 04</div><h2>Have something<br/>worth <em>building?</em></h2><p>I'm interested in mechanical engineering, systems integration, and challenging hardware projects. I'd love to hear about what you're working on.</p><a class="contact-email" href="mailto:ethanbikhazi-green@ucsb.edu">ethanbikhazi-green@ucsb.edu <span aria-hidden="true">↗</span></a></div><div class="contact-aside"><span>FIND ME ONLINE</span><a href="https://www.linkedin.com/in/ethan-bikhazi-green/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a><p>Resume available on request. <br/>Based in California.</p></div></div></section>
+    <section id="contact" class="contact-section"><div class="shell contact-flex"><div><div class="eyebrow"><span class="eyebrow-line"></span> LET'S CONNECT / 04</div><h2>Have something<br/>worth <em>building?</em></h2><p>I'm interested in mechanical engineering, systems integration, and challenging hardware projects. I'd love to hear about what you're working on.</p><a class="contact-email" href="mailto:ethanbikhazi-green@ucsb.edu">ethanbikhazi-green@ucsb.edu <span aria-hidden="true">↗</span></a></div><div class="contact-aside"><span>FIND ME ONLINE</span><a href="https://www.linkedin.com/in/ethan-bikhazi-green/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a><p><a href="mailto:ethanbikhazi-green@ucsb.edu?subject=Resume%20request" class="resume-request">Request my resume ↗</a><br/>Based in California.</p></div></div></section>
   </main>
   <footer><div class="shell footer-row"><span>© <span class="current-year">2026</span> ETHAN BIKHAZI-GREEN</span><span>DESIGNED TO ITERATE. BUILT TO LAST.</span><a href="#top" aria-label="Back to top">BACK TO TOP ↑</a></div></footer>
 </body>
