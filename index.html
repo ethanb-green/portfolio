@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Engineering portfolio of Ethan Bikhazi-Green. Mechanical design, systems integration, controls, prototyping, and automation." />
+  <meta name="theme-color" content="#f7f7f2" />
+  <title>Ethan Bikhazi-Green — Engineering Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="projects.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body id="top" data-page="home">
+  <header class="site-header">
+    <div class="shell nav-wrap">
+      <a class="brand" href="index.html" aria-label="Home"><span class="brand-mark">EBG<span class="brand-dot">.</span></span><span class="brand-caption">ENGINEERING PORTFOLIO</span></a>
+      <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span></button>
+      <nav id="primary-nav" class="nav-links" aria-label="Main navigation">
+        <a href="#work">Work</a><a href="#about">About</a><a href="#experience">Experience</a><a href="#contact" class="nav-contact">Let's talk <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero shell" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span> MECHANICAL ENGINEERING <span class="eyebrow-dot">/</span> SYSTEMS & CONTROLS</div>
+        <h1 id="hero-title">I build things<br/>that <em>work.</em></h1>
+        <p class="hero-description">I'm <strong>Ethan Bikhazi-Green</strong>, a mechanical engineering student at UC Santa Barbara. I work across mechanical design, hardware integration, controls, and automation — from first sketch to tested prototype. This site documents what I built and what I learned.</p>
+        <div class="hero-buttons"><a class="button button-primary" href="#work">Explore my projects <span aria-hidden="true">↗</span></a><a class="button button-outline" href="mailto:ethanbikhazi-green@ucsb.edu">Get in touch <span aria-hidden="true">→</span></a></div>
+        <div class="hero-status"><span class="status-pulse" aria-hidden="true"></span> B.S. Mechanical Engineering · Expected June 2027</div>
+      </div>
+      <div class="hero-visual" aria-label="Stylized engineering diagram representing design, fabrication and testing">
+        <div class="hero-visual-label">FIG. 01 <span>DESIGN / BUILD / TEST</span></div>
+        <svg class="hero-mechanical" viewBox="0 0 560 510" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs><pattern id="dots" width="25" height="25" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1.3" fill="#637788" opacity=".27"/></pattern><linearGradient id="ring" x1="100" y1="60" x2="480" y2="460"><stop stop-color="#7CDBF1"/><stop offset="1" stop-color="#2D63F5"/></linearGradient></defs>
+          <rect width="560" height="510" fill="url(#dots)"/>
+          <circle cx="282" cy="251" r="174" stroke="#586F86" stroke-width="1" stroke-dasharray="6 8" opacity=".62"/>
+          <circle cx="282" cy="251" r="132" stroke="url(#ring)" stroke-width="2"/>
+          <circle cx="282" cy="251" r="93" stroke="#8FBBCB" stroke-width="1.4"/>
+          <circle cx="282" cy="251" r="33" stroke="#B5EAF2" stroke-width="2"/>
+          <circle cx="282" cy="251" r="12" fill="#88E2ED"/>
+          <path d="M282 119V218M282 284v99M150 251h99m66 0h99" stroke="#8CC5D1" stroke-width="1" opacity=".75"/>
+          <path d="M282 77V33M282 425v37M108 251H65m392 0h39" stroke="#7EDAE6" stroke-width="2"/>
+          <path d="M103 116L450 393M449 110L106 397" stroke="#8195A8" stroke-width="1" stroke-dasharray="3 11" opacity=".5"/>
+          <path d="M189 158A132 132 0 0 1 371 346" stroke="#7EDAE6" stroke-width="10" stroke-linecap="round"/>
+          <path d="M191 343A132 132 0 0 1 376 162" stroke="#8F9FFE" stroke-width="10" stroke-linecap="round"/>
+          <path d="M421 124H510M421 124L371 175M81 394H172L211 354" stroke="#B2C4CD" stroke-width="1"/>
+          <circle cx="421" cy="124" r="3" fill="#7EDAE6"/><circle cx="211" cy="354" r="3" fill="#7EDAE6"/>
+          <text x="426" y="111" fill="#B6D1E0" font-family="monospace" font-size="12">R 132</text>
+          <text x="81" y="385" fill="#B6D1E0" font-family="monospace" font-size="12">MODEL 001</text>
+          <text x="282" y="481" text-anchor="middle" fill="#718DA1" font-family="monospace" font-size="10" letter-spacing="3">ITERATE // VALIDATE // IMPROVE</text>
+        </svg>
+        <div class="hero-visual-bottom"><span>MECHANICAL ↔ SOFTWARE</span><span>01 / ∞</span></div>
+      </div>
+    </section>
+
+    <section class="metrics-band" aria-label="Selected project outcomes">
+      <div class="shell metric-row"><div><strong>30 <small>cm</small></strong><span>FLYWHEEL PROTOTYPE</span></div><div><strong>25<small>%</small></strong><span>MODELED MASS REDUCTION</span></div><div><strong>3,300<small>+</small></strong><span>ANNUAL HOURS UNLOCKED</span></div><div class="metric-statement">A hands-on approach, from <em>idea</em> to implementation.</div></div>
+    </section>
+
+    <section id="work" class="section shell work-section" aria-labelledby="work-heading">
+      <div class="section-intro"><div><div class="eyebrow eyebrow-dark"><span class="eyebrow-line"></span> SELECTED WORK / 01</div><h2 id="work-heading">Built, tested <em>&amp; documented.</em></h2></div><p>Explore build footage, actual CAD work, structural analysis, and the decisions behind each engineering project.</p></div>
+      <div class="filters" role="group" aria-label="Filter projects"><button class="filter active" data-filter="all" aria-pressed="true">All projects</button><button class="filter" data-filter="Mechanical" aria-pressed="false">Mechanical</button><button class="filter" data-filter="Systems" aria-pressed="false">Systems & controls</button><button class="filter" data-filter="Analysis" aria-pressed="false">Analysis</button><button class="filter" data-filter="Software" aria-pressed="false">Software</button></div>
+      <div class="project-grid" id="projects-grid" aria-live="polite"></div>
+      <div class="future-project"><div class="future-icon">+</div><div><h3>There’s always another project.</h3><p>This portfolio is designed to grow with every new prototype, experiment, and engineering challenge.</p></div><span class="future-note">MORE TO COME ↗</span></div>
+    </section>
+
+    <section id="about" class="section about-section" aria-labelledby="about-heading"><div class="shell about-grid"><div><div class="eyebrow"><span class="eyebrow-line"></span> THE APPROACH / 02</div><h2 id="about-heading">Curious about the <em>whole system.</em></h2></div><div class="about-copy"><p>I'm interested in more than making a component look right in CAD. I enjoy understanding how mechanical hardware, electronics, controls, and software interact — then making those connections work in the real world.</p><p>My work includes designing and machining parts, building test rigs, modeling control systems, and developing automation that people actually use.</p><div class="capabilities"><span>CAD & Mechanical Design</span><span>FEA & Analysis</span><span>Mechatronics</span><span>Python / MATLAB</span><span>Prototyping</span><span>Systems Integration</span></div></div></div></section>
+
+    <section id="experience" class="section shell experience-section" aria-labelledby="experience-heading"><div class="section-intro"><div><div class="eyebrow eyebrow-dark"><span class="eyebrow-line"></span> EXPERIENCE / 03</div><h2 id="experience-heading">Where I've <em>worked.</em></h2></div><p>Research, engineering teams, and deployed software — different settings, same focus on practical problem solving.</p></div>
+      <div class="experience-list">
+        <div class="experience-item"><div class="experience-dates">2026 — PRESENT</div><div><h3>Business Automation & AI Solutions Developer</h3><p>Farm Credit East <span>· Remote</span></p></div><p>Built AI agents and automations across Microsoft tools, delivering measurable improvements to operational workflows.</p></div>
+        <div class="experience-item"><div class="experience-dates">JAN — MAY 2026</div><div><h3>Undergraduate Research Assistant</h3><p>ATOM-IQ <span>· Santa Barbara, CA</span></p></div><p>Designed mechanical infrastructure for an autonomous structural-materials lab and coordinated hardware interfaces.</p></div>
+        <div class="experience-item"><div class="experience-dates">2024 — 2025</div><div><h3>Aerospace Engineer</h3><p>Gaucho Rocket Project <span>· Santa Barbara, CA</span></p></div><p>Worked on PID/TVC modeling, aerodynamic hardware, and prototype fabrication.</p></div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section"><div class="shell contact-flex"><div><div class="eyebrow"><span class="eyebrow-line"></span> LET'S CONNECT / 04</div><h2>Have something<br/>worth <em>building?</em></h2><p>I'm interested in mechanical engineering, systems integration, and challenging hardware projects. I'd love to hear about what you're working on.</p><a class="contact-email" href="mailto:ethanbikhazi-green@ucsb.edu">ethanbikhazi-green@ucsb.edu <span aria-hidden="true">↗</span></a></div><div class="contact-aside"><span>FIND ME ONLINE</span><a href="https://www.linkedin.com/in/ethan-bikhazi-green/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a><p>Resume available on request. <br/>Based in California.</p></div></div></section>
+  </main>
+  <footer><div class="shell footer-row"><span>© <span class="current-year">2026</span> ETHAN BIKHAZI-GREEN</span><span>DESIGNED TO ITERATE. BUILT TO LAST.</span><a href="#top" aria-label="Back to top">BACK TO TOP ↑</a></div></footer>
+</body>
+</html>
