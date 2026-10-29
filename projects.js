@@ -435,7 +435,7 @@ window.PORTFOLIO_PROJECTS = [
       "Mechanical"
     ],
     "featured": false,
-    "image": "assets/rocket.svg",
+    "image": "assets/media/rocket-project-cover.webp",
     "role": "Aerospace Engineer · Gaucho Rocket Project",
     "timeline": "August 2024 – June 2025",
     "summary": "Contributed to rocket controls modeling and aerodynamic hardware design, bridging vehicle dynamics, simulation, CAD, and prototyping.",
@@ -477,11 +477,28 @@ window.PORTFOLIO_PROJECTS = [
       "CAD",
       "3D printing"
     ],
-    "nextSteps": "Add simulation plots and permitted rocket photos; explain model assumptions and which results were simulated versus tested.",
-    "imageAlt": "Illustrative graphic representing the project; a verified project photograph has not yet been supplied.",
-    "imageLabel": "ILLUSTRATIVE GRAPHIC",
-    "gallery": [],
-    "documents": []
+    "nextSteps": "Add simulation plots and fin CAD images to show individual controls and hardware contributions.",
+    "imageAlt": "Altaris rocket on its launch rail at a Gaucho Rocket Project launch site, captured from the supplied team video",
+    "imageLabel": "GAUCHO ROCKET FOOTAGE",
+    "gallery": [
+      {
+        "src": "assets/media/rocket-launch-poster.webp",
+        "alt": "Altaris rocket and launch rail before takeoff",
+        "caption": "Altaris rocket on the launch rail before liftoff"
+      },
+      {
+        "src": "assets/media/rocket-onboard-view.webp",
+        "alt": "View toward the launch structure recorded by an onboard camera",
+        "caption": "Onboard camera view during the launch sequence"
+      }
+    ],
+    "documents": [],
+    "video": {
+      "src": "assets/media/rocket-launch-demo.mp4",
+      "poster": "assets/media/rocket-launch-poster.webp",
+      "caption": "Altaris rocket launch footage from the Gaucho Rocket Project; my controls-modeling and fin-design contributions are described below."
+    },
+    "sourceNote": "Launch video supplied by the user, showing an Altaris rocket with Gaucho Rocket Project branding. This is team footage, not direct evidence of an individual engineering contribution or validation of simulation targets."
   },
   {
     "id": "air-motor",
