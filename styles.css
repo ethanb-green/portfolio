@@ -112,3 +112,10 @@
   .case-gallery-feature .case-gallery-item figcaption{font-size:10px;line-height:1.5;margin-top:7px}
   .case-visual-summary{margin:24px 0;font-size:14px}
 }
+
+/* Air motor: portrait photographs deserve taller gallery frames than CAD diagrams. */
+.case-gallery-feature:has(img[src*="air-motor-"]) .case-gallery-item>a{aspect-ratio:0.88/1;}
+.case-gallery-feature:has(img[src*="air-motor-"]) .case-gallery-item>a img{object-fit:contain;background:#eae9e5;}
+@media(max-width:670px){
+  .case-gallery-feature:has(img[src*="air-motor-"]) .case-gallery-item>a{aspect-ratio:0.8/1;}
+}

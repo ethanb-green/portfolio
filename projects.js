@@ -510,25 +510,25 @@ window.PORTFOLIO_PROJECTS = [
       "Mechanical"
     ],
     "featured": false,
-    "image": "assets/motor.svg",
+    "image": "assets/media/air-motor-cover.webp",
     "role": "Machine Shop Course Project",
     "timeline": "May 2025",
-    "summary": "Machined and assembled a 5,000 RPM air motor using manual milling, turning, drilling, and precision finishing processes.",
+    "summary": "Machined and assembled a 5,000 RPM air motor using CNC milling and lathe operations, producing and fitting precision metal components.",
     "metrics": [
       [
         "5,000",
         "RPM"
       ],
       [
-        "Mill",
-        "Manual machining"
+        "CNC",
+        "Milling"
       ],
       [
         "Lathe",
         "Precision turning"
       ]
     ],
-    "challenge": "Manufacture and assemble closely fitting mechanical components using manual machine-shop equipment.",
+    "challenge": "Machine and assemble closely fitting metal components for an air-powered motor, considering part geometry, machining operations, and mechanical fit.",
     "process": [
       [
         "Plan operations",
@@ -536,7 +536,7 @@ window.PORTFOLIO_PROJECTS = [
       ],
       [
         "Fabricate",
-        "Used manual mill, lathe, and drill operations with precision finishing."
+        "Used a CNC mill and lathe to produce metal components, followed by assembly and fitting."
       ],
       [
         "Assemble",
@@ -546,15 +546,36 @@ window.PORTFOLIO_PROJECTS = [
     "result": "Completed fabrication and assembly of a 5,000 RPM air motor as a machine-shop project.",
     "contribution": "Performed manufacturing operations and mechanical assembly.",
     "tools": [
-      "Manual mill",
-      "Lathe",
-      "Drill press",
+      "CNC milling",
+      "Lathe operation",
+      "Machining",
       "Mechanical assembly"
     ],
-    "nextSteps": "Add machining progress photos, an exploded assembly view, and any measured speed/test data.",
-    "imageAlt": "Illustrative graphic representing the project; a verified project photograph has not yet been supplied.",
-    "imageLabel": "ILLUSTRATIVE GRAPHIC",
-    "gallery": [],
+    "nextSteps": "Add machining process photographs, fabrication drawings, and measured motor speed if available.",
+    "imageAlt": "Two real photographs of the assembled machined air motor, showing the output shaft, spring, brass component, and aluminum base.",
+    "imageLabel": "ACTUAL PROJECT PHOTOS",
+    "gallery": [
+      {
+        "src": "assets/media/air-motor-1.webp",
+        "alt": "Front view of machined air motor showing output shaft, spring mechanism, aluminum body, and engraved base",
+        "caption": "Front view — output shaft, spring mechanism, and machined base"
+      },
+      {
+        "src": "assets/media/air-motor-2.webp",
+        "alt": "Rear of assembled air motor with brass housing, air connector, and circular base",
+        "caption": "Rear view — brass housing and engraved mounting base"
+      },
+      {
+        "src": "assets/media/air-motor-3.webp",
+        "alt": "Side view of assembled air motor showing brass housing, air fitting, metal body, and spring",
+        "caption": "Side profile — brass housing, air fitting, and spring assembly"
+      },
+      {
+        "src": "assets/media/air-motor-4.webp",
+        "alt": "Opposite side view of air motor showing metal rotor, brass component, spring, and base",
+        "caption": "Opposite profile — machined rotor, spring, and mounting base"
+      }
+    ],
     "documents": []
   },
   {
