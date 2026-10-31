@@ -119,3 +119,21 @@
 @media(max-width:670px){
   .case-gallery-feature:has(img[src*="air-motor-"]) .case-gallery-item>a{aspect-ratio:0.8/1;}
 }
+
+/* Version 6 — straightforward introduction, more space for actual project work */
+.hero{padding-top:65px;padding-bottom:74px;gap:55px}
+.hero h1{font-size:clamp(43px,5.2vw,77px);line-height:1.045;letter-spacing:-.069em;margin:29px 0 27px;overflow-wrap:normal}
+.hero h1 .hero-name{color:var(--ink)}
+.hero-description{font-size:16px;line-height:1.78;max-width:575px;margin-bottom:12px}
+.hero-location{font-size:15px;color:#4e6169;line-height:1.65;max-width:550px;margin-bottom:0}
+.hero-buttons{margin-top:28px}
+.hero-status{margin-top:24px}
+.hero-visual{box-shadow:15px 16px 0 #e8e8e1}
+.hero-work-stack a:first-child img{object-fit:cover!important;object-position:center center!important;padding:0!important;background:#182b37}
+.hero-work-stack a:last-child img{object-fit:cover!important;object-position:center center!important;padding:0!important;background:#e7e7e5}
+.hero-work-primary img{object-fit:cover!important;object-position:center center!important}
+.work-section{padding-top:72px}
+.work-section .section-intro{margin-bottom:35px}
+.nav-links>a[href$=".pdf"]{font-weight:700}
+@media(max-width:960px){.hero{gap:36px;padding:58px 0 66px}.hero h1{font-size:clamp(40px,5.2vw,65px)}}
+@media(max-width:670px){.hero{padding:40px 0 56px}.hero h1{font-size:clamp(35px,8.7vw,54px);letter-spacing:-.07em;margin:19px 0 23px}.hero-description{font-size:15px;line-height:1.7}.hero-location{font-size:14px}.hero-status{margin-top:20px}.work-section{padding-top:58px}}

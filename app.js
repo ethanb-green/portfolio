@@ -19,11 +19,7 @@
   const renderGrid = filter => {
     if (!grid) return;
     const filtered = projects.filter(p => filter === 'all' || p.categories.includes(filter));
-    const featureOrder = ['frisbee-launcher', 'jumper-robot', 'atom-iq', 'lug-wrench-fea', 'bed-frame-fea'];
-    const ordered = filter === 'all' ? [...filtered].sort((a,b) => {
-      const rank = project => featureOrder.indexOf(project.id) >= 0 ? featureOrder.indexOf(project.id) : 100 + projects.indexOf(project);
-      return rank(a)-rank(b);
-    }) : filtered;
+    const ordered = filtered; // projects.js is already in curated display order.
     grid.innerHTML = ordered.map((p,i) => renderCard(p, filter === 'all' && i < 2)).join('') || '<p class="empty-results">No projects in this category yet.</p>';
   };
   if (grid) {
